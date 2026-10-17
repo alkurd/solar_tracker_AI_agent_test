@@ -3,7 +3,7 @@
 | Veld | Waarde |
 |---|---|
 | Documentversie | 1.0 |
-| Appversie | 0.2.0 |
+| Appversie | 0.2.1 |
 | Datum | 2026-10-17 |
 | Status | Werkend lokaal prototype; niet vrijgegeven voor veldgebruik |
 | Eigenaar/productverantwoordelijke | Nog vast te leggen |
@@ -36,6 +36,7 @@ Een Laravel-webapp voor openbare, alleen-lezen trackerstatus en afgeschermde ope
 
 - Appversie: `0.2.0`; wijzig `APP_VERSION`/de config-default en voeg per release een gedateerde sectie toe aan [CHANGELOG.md](../CHANGELOG.md).
 - Defecten en compatibiliteitsverzoeken: [BUG_REPORT.md](../BUG_REPORT.md).
+- Externe projectsvergelijking: [VERGELIJKING.md](VERGELIJKING.md).
 - Implementatiehandleiding en lokale setup: [README.md](../README.md).
 - Nog uit te voeren werk: [PROJECT_AFMAKEN.md](PROJECT_AFMAKEN.md).
 

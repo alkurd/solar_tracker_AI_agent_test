@@ -23,7 +23,7 @@ class TrackerIntegrationTest extends TestCase
         $this->get(route('tracker.dashboard'))
             ->assertOk()
             ->assertSee('Solar tracker')
-            ->assertSee('v0.2.0')
+            ->assertSee('v0.2.1')
             ->assertSee('Latest telemetry')
             ->assertSee('Net yield (latest)')
             ->assertSee('Solar opbrengst')
@@ -132,6 +132,18 @@ class TrackerIntegrationTest extends TestCase
 
         $this->postJson('/api/tracker/logs', [])
             ->assertUnauthorized();
+    }
+
+    public function test_api_validation_errors_are_json_without_an_accept_header(): void
+    {
+        config(['services.tracker.ingest_token' => 'telemetry-secret']);
+
+        $this->call('POST', '/api/tracker/logs', [], [], [], [
+            'HTTP_AUTHORIZATION' => 'Bearer telemetry-secret',
+            'CONTENT_TYPE' => 'application/json',
+        ], '{}')
+            ->assertUnprocessable()
+            ->assertJsonValidationErrors(['positie_actuator_1', 'opbrengst']);
     }
 
     public function test_valid_telemetry_is_stored(): void

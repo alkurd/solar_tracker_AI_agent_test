@@ -8,7 +8,7 @@ This workspace is intentionally kept on Laravel 11 as requested, for local proto
 
 ## Versions and release notes
 
-The current app version is `0.2.0`, shown in the dashboard header and configured through `APP_VERSION` (default `0.2.0`). For each release, update `APP_VERSION` and add a dated section to [CHANGELOG.md](CHANGELOG.md). Keep newly reported defects and their resolutions in [BUG_REPORT.md](BUG_REPORT.md).
+The current app version is `0.2.1`, shown in the dashboard header and configured through `APP_VERSION` (default `0.2.1`). For each release, update `APP_VERSION` and add a dated section to [CHANGELOG.md](CHANGELOG.md). Keep newly reported defects and their resolutions in [BUG_REPORT.md](BUG_REPORT.md).
 
 ## Project documents
 
@@ -16,6 +16,7 @@ The current app version is `0.2.0`, shown in the dashboard header and configured
 - [PLC/API interface](docs/PLC_INTERFACE.md): telemetry mapping, command payloads, and unconfirmed contract items.
 - [Preliminary safety note](docs/VEILIGHEIDSRAPPORT.md): software controls, external safety responsibilities, and release blockers. It is not a certified machine risk assessment.
 - [Test report](docs/TESTRAPPORT.md): verified software checks and tests not yet performed.
+- [Project comparison](docs/VERGELIJKING.md): findings from the supplied GitHub repository and the adopted API error-handling pattern.
 - [Project completion checklist](docs/PROJECT_AFMAKEN.md): separate list of outstanding engineering, safety, security, and commissioning work.
 
 ## Local setup

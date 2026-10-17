@@ -12,15 +12,17 @@ This workspace is a local-only prototype. Composer audit reports four advisories
 - [x] Scaffolded Laravel 11 in the workspace root.
 - [x] Implemented tracker migrations, models, authentication, controls, telemetry API, and Blade views.
 - [x] Added configurable telemetry field/value mapping in config/tracker.php to tolerate sender schema differences.
+- [x] API exceptions on `/api/*` routes are returned as JSON without requiring an `Accept` header.
 - [x] Added repeatable 14-day demo telemetry and a zoomable opbrengst chart.
 - [x] Added a scheduler task to request automatic PLC mode after more than 10 minutes without operator activity; PLC endpoint must support explicit `set_mode` payload.
 - [x] Kept net opbrengst in the telemetry KPI/table and charted solar opbrengst separately; added async controls and emergency confirmation/glow/reset.
 - [x] Installed dependencies for this local-only prototype with Composer security blocking disabled after the user chose to keep Laravel 11.
 - [x] npm audit reports seven frontend toolchain advisories; Tailwind 3 major upgrade deferred.
 - [x] Configured MAMP MySQL on port 8889 and applied migrations; Homebrew MySQL was stopped after it was superseded.
-- [x] Verified routes, migrations, and tests (19 passed, 70 assertions); filtered only Laravel 11's PHP 8.5 MySQL SSL constant deprecation.
+- [x] Verified routes, migrations, and tests (20 passed, 74 assertions); filtered only Laravel 11's PHP 8.5 MySQL SSL constant deprecation.
 - [x] Provisioned/reset the requested operator account through a hidden CLI password prompt; no public registration was added.
 - [x] No additional VS Code extensions or task configuration are required.
 - [x] Documentation is current in README.md.
 - [x] Version notes are maintained in CHANGELOG.md; the app version is displayed in the dashboard header.
+- [x] Current app version is v0.2.1; project comparison is documented in docs/VERGELIJKING.md.
 - [x] Started the confirmed local development server at http://127.0.0.1:8088.

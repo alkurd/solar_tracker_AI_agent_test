@@ -2,6 +2,16 @@
 
 Notable project changes are recorded here. Versions use semantic versioning while the app is pre-1.0.
 
+## [0.2.1] - 2026-10-17
+
+### Fixed
+
+- API exceptions and validation failures now return JSON on `/api/*` routes even when a sender omits the `Accept` header.
+
+### Compared
+
+- Reviewed `Ogulcan2005/Solar_tracker`; no custom tracker functionality was present to adopt. Independently implemented its API JSON-rendering pattern.
+
 ## [0.2.0] - 2026-10-17
 
 ### Added

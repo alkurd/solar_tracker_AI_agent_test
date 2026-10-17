@@ -3,24 +3,25 @@
 | Veld | Waarde |
 |---|---|
 | Rapportversie | 1.0 |
-| Appversie | 0.2.0 |
+| Appversie | 0.2.1 |
 | Datum | 2026-10-17 |
 | Teststatus | Softwaretests geslaagd; hardware-/PLC-tests niet uitgevoerd |
 
 ## Uitgevoerde controles
 
-- `php artisan test`: 19 tests geslaagd, 70 assertions.
+- `php artisan test`: 20 tests geslaagd, 74 assertions.
 - `npm run build`: Vite-build geslaagd.
 - `php artisan migrate:status`: vijf migraties toegepast op de MAMP-appdatabase.
 - `php artisan schedule:list`: idle-modustaak geregistreerd per minuut.
 - `php artisan config:show tracker.telemetry`: veld- en waardemappings geladen.
-- Browsercontrole: openbare status, versie `0.2.0`, KPI netto-opbrengst en grafiek met alleen bruto-opbrengst.
+- Browsercontrole: openbare status, versie `0.2.1`, KPI netto-opbrengst en grafiek met alleen bruto-opbrengst.
 - Databasecontrole: 673 trackerrecords, geen `NULL` in `netto_opbrengst`; nieuwste demorecord was nul tijdens nachtelijke tijd.
 
 ## Geteste softwaregevallen
 
 - Authenticated/unauthenticated toegang tot status en bediening.
 - Geldige en ongeldige bearer-token voor telemetrie.
+- API-validatiefouten zijn JSON, ook zonder `Accept`-header.
 - Canonieke telemetrie en genest extern veldpad met enum-normalisatie.
 - Seeder-idempotentie en 14-daagse demo-historie.
 - Inactiviteitsgrens >600 seconden, herhaalpreventie en recente activiteit.

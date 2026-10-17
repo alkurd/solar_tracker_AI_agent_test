@@ -30,7 +30,7 @@ Reported during dashboard review on 2026-10-17.
 
 ## BR-003: Net yield appeared empty while the chart showed production
 
-**Severity:** Low  
+**Severity:** Low
 **Status:** Resolved
 
 **Observed:** The KPI showed the latest `netto_opbrengst`, which was zero for the newest nighttime demo sample, while the chart showed gross `opbrengst` over the previous days.
@@ -66,6 +66,13 @@ Reported during dashboard review on 2026-10-17.
 **Status:** Implemented in v0.2.0
 
 External senders may use different field names or nested JSON. `config/tracker.php` now maps sender paths and normalizes configured enum values into canonical application fields before the existing validation runs. Unit conversion remains explicit and must be added if a sender reports different units.
+
+## BR-008: API validation errors depended on Accept header
+
+**Severity:** Low
+**Status:** Resolved in v0.2.1
+
+API exceptions and validation failures now render as JSON for all `/api/*` routes, including clients that omit `Accept: application/json`. A feature test covers this case.
 
 ## Database migration clarification
 
